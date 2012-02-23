@@ -2,6 +2,8 @@
 <% attributes("headline") = "This is headline" %> 
 <%@ val ns: Seq[Int] = Seq(1,2,3) %> 
 <%@ val message: String = "default" %>
+<%@ val none: Option[String] = None %>
+<%@ val some: Option[String] = Some("foo") %>
 
 This is <%= message %>.
 <br/>
@@ -16,3 +18,10 @@ true
 #else
 false
 #end
+<br/>
+<br/>
+
+none:<%= none %><br/>
+<br/>
+some:<%= some %><br/>
+<br/>
