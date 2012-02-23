@@ -1,18 +1,23 @@
-1. Launch [xsbt 0.11.2](https://github.com/harrah/xsbt).
+- Launch [xsbt 0.11.2](https://github.com/harrah/xsbt).
 
 ```
-./sbt
+sbt
 ```
 
-2. Run Jetty
+- Run Jetty
 
 ```
 container:start
 ```
+- Edit and then restart
 
-3. Go to http://localhost:8080/.
+```
+~;container:stop;container:start
+```
 
-4. Learn more at http://www.scalatra.org/stable/book.
+- Go to http://localhost:8080/.
 
-5. Happy hacking!
+- Learn more at http://www.scalatra.org/stable/book.
+
+- Happy hacking!
 
