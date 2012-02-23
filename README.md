@@ -1,4 +1,4 @@
-1. Launch [SBT](http://code.google.com/p/simple-build-tool).
+1. Launch [xsbt 0.11.2](https://github.com/harrah/xsbt).
 
 ```
 ./sbt
