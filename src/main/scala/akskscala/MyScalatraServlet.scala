@@ -22,6 +22,12 @@ class MyScalatraServlet extends ScalatraServlet with ScalateSupport {
     "さきにマッチする"
   }
 
+  get("/dup") { "絶対に呼ばれない" }
+
+  get("/dup") { "絶対に呼ばれない" }
+
+  get("/dup") { "重複した route がある場合、一番最後に定義されたものだけが有効" } // http://localhost:8080/dup
+
   notFound {
     // Try to render a ScalateTemplate if no route matched
     findTemplate(requestPath) map { path =>
@@ -29,4 +35,5 @@ class MyScalatraServlet extends ScalatraServlet with ScalateSupport {
       layoutTemplate(path)
     } orElse serveStaticResource() getOrElse resourceNotFound() 
   }
+
 }
