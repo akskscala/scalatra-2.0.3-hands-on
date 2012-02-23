@@ -5,6 +5,10 @@ import scalate.ScalateSupport
 
 class MyScalatraServlet extends ScalatraServlet with ScalateSupport {
 
+  before() {
+    contentType = "text/html"
+  }
+
   get("/") {
     <html>
       <body>
@@ -12,6 +16,10 @@ class MyScalatraServlet extends ScalatraServlet with ScalateSupport {
         Say <a href="hello-scalate">hello to Scalate</a>.
       </body>
     </html>
+  }
+
+  get("/ssp") {
+    ssp("example.ssp", ("message" -> "a ssp example"))
   }
 
   get("/order") { 

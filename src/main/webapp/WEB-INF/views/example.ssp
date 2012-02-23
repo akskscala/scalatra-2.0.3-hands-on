@@ -1,0 +1,18 @@
+<% attributes("title") = "This is title" %>
+<% attributes("headline") = "This is headline" %> 
+<%@ val ns: Seq[Int] = Seq(1,2,3) %> 
+<%@ val message: String = "default" %>
+
+This is <%= message %>.
+<br/>
+<br/>
+#for(n <- ns) 
+<%= n %>, ${n}<br/>
+#end
+
+<br/>
+#if (ns.size == 3)
+true
+#else
+false
+#end
